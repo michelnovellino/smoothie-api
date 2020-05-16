@@ -1,12 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const Model = require('../models/smoothie.model')
+const Model = require('../models/fruits.model')
 
 exports.Get = async (req, res) => {
-    const Smoothies = await Model.find()
-    console.log(Smoothies)
-    console.table(req)
-    res.json(Smoothies)
+	const Fruits = await Model.find()
+	console.log(Fruits)
+	res.json(Fruits)
 };
 
 // exports.GetById = async (req, res) => {
@@ -14,12 +13,12 @@ exports.Get = async (req, res) => {
 //     res.status(200).json(Smoothie)
 // };
 
-exports.Create = async (req, res) => {
-    const Smoothie = new Model(req.body)
-    await Smoothie.save()
+// exports.Create = async (req, res) => {
+// 	const Fruits = new Model(req.body)
+// 	await Fruits.save()
 
-    res.status(200).json(Smoothie)
-};
+// 	res.status(200).json(Fruits)
+// };
 
 // exports.Update = async (req, res) => {
 //     await Model.findByIdAndUpdate(req.params.id, req.body)
