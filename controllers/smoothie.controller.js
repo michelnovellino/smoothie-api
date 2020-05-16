@@ -17,6 +17,7 @@ exports.GetById = async (req, res) => {
 exports.Create = async (req, res) => {
     const Smoothie = new Model(req.body)
     await Smoothie.save()
+    
     res.status(200).json(Smoothie)
 };
 

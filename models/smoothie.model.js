@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const Task = new Schema(
+const Model = new Schema(
     {
         title: { type: String },
-        name: { type: String }
+        fruitsID: [Schema.Types.ObjectId],
+        liquidID: Schema.Types.ObjectId,
+        proteinID: Schema.Types.ObjectId
     }, {
-    colecction: 'tasks'
+    colecction: 'smoothies'
 });
 
-module.exports = mongoose.model('Task', Task);
+module.exports = mongoose.model('Smoothie', Model);
