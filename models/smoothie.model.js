@@ -31,6 +31,7 @@ const Model = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'Protein'
         },
+        tastes: { type: Number }
     }, {
     colecction: 'smoothies'
 });
