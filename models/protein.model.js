@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const Model = new Schema(
     {
-        name: { type: String },
+        name: { type: String }
     }, {
     colecction: 'proteins'
 });

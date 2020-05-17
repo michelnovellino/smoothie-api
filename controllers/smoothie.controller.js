@@ -4,8 +4,12 @@ const Model = require('../models/smoothie.model')
 
 exports.Get = async (req, res) => {
     const Smoothies = await Model.find()
+        .populate('fruits')
+        .populate('liquids')
+        .populate('proteins')
+        .exec()
     console.log(Smoothies)
-    console.table(req)
+    console.table(req.body)
     res.json(Smoothies)
 };
 
@@ -16,6 +20,7 @@ exports.Get = async (req, res) => {
 
 exports.Create = async (req, res) => {
     const Smoothie = new Model(req.body)
+    console.info(req.body)
     await Smoothie.save()
 
     res.status(200).json(Smoothie)
