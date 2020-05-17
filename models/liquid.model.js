@@ -5,7 +5,7 @@ const Model = new Schema(
     {
         name: { type: String },
     }, {
-    colecction: 'liquid'
+    colecction: 'liquids'
 });
 
 module.exports = mongoose.model('Liquid', Model);

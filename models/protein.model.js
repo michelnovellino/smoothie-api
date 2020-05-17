@@ -5,7 +5,7 @@ const Model = new Schema(
     {
         name: { type: String },
     }, {
-    colecction: 'protein'
+    colecction: 'proteins'
 });
 
 module.exports = mongoose.model('Protein', Model);
